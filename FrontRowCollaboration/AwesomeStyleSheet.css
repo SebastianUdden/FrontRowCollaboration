@@ -1,4 +1,8 @@
-﻿header {
+﻿alerts {
+    background-color:deeppink;
+}
+
+header {
     background-color:hotpink;
     height:100px;
 }
