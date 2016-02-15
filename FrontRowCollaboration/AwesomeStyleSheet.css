@@ -5,18 +5,16 @@
 
 footer {
     background-color:hotpink;
-    height:100px;
 }
 
 aside {
     background-color:lightpink;
-    width:100px;
+    height:80%;
 }
 
 body {
     margin: 0 auto;
     background-color:#00ffd0;
-    padding:20px;
 }
 
 h1{

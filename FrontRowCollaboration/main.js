@@ -1,6 +1,8 @@
 ﻿function PrintName()
 {
-    document.getElementById("test").innerHTML = "test"; 
+    document.getElementById("test").innerHTML = "test";
+
+    Alerts("Hej");
 }
 
 var x = 1500;
@@ -18,4 +20,3 @@ function Alerts(value) {
 
 }
 
-Alerts(y);
