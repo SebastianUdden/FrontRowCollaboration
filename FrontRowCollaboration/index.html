@@ -1,14 +1,38 @@
 ﻿<!DOCTYPE html>
-<html ng-app>
+<script src="scripts/jquery-1.9.1.js"></script>
+<script src="scripts/ai.0.15.0-build58334.js"></script>
+<script src="scripts/bootstrap.js"></script>
+
+<html ng-app="myApp">
 <head>
     <title></title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
     <link href="AwesomeStyleSheet.css" rel="stylesheet" />
     <script src="main.js"></script>
-	<meta charset="utf-8" />
+
+
 </head>
 <body onload="PrintName()">
-    
-   
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">Front Row Collaboration Official Website</a>
+            </div>
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="#">Home</a></li>
+                <li><a href="#">Usless Information</a></li>
+                <li><a href="#">Link to google</a></li>
+                <li><a href="#">A map</a></li>
+            </ul>
+        </div>
+    </nav>
+
+
     <p>Hello Front Row! This team is awesome.</p> 
     <input type="text" ng-model="textblock"/>
 
@@ -27,13 +51,17 @@
         var x = 10;
         var y = 5;
 
-        //function shitScript() {
-        //    for (var i = 0; i < x; i++) {
-        //        alert("skiten funkar", i);
-        //    }
-        //}
+        function shitScript() {
+            for (var i = 0; i < x; i++) {
+                alert("skiten funkar", i);
+            }
+        }
 
-        shitScript();
+        
+
+
+
     </script>
+    <button name="button1" onclick="shitScript();"></button>
 </body>
 </html>
