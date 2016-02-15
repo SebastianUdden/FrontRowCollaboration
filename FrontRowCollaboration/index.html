@@ -1,5 +1,5 @@
 ﻿<!DOCTYPE html>
-<html ng-app="myApp">
+<html ng-app>
 <head>
     <title></title>
     <link href="AwesomeStyleSheet.css" rel="stylesheet" />
@@ -7,19 +7,21 @@
 	<meta charset="utf-8" />
 </head>
 <body onload="PrintName()">
+    
+   
     <p>Hello Front Row! This team is awesome.</p> 
-    <br />
-    <br />
-    <br />
-    <h1>PS.</h1>
-    <p id="test">So is AngularJS...</p>
-    <h1>DS.</h1>
+    <input type="text" ng-model="textblock"/>
+
+    <h1>This is the AngularJS connection: {{textblock}}</h1>
 
     <!--This is the aside-->
     <aside>The ASIDE</aside>
 
     <!--This is the footer-->
     <footer>The FOOTER</footer>
+
+    <!--AngularJS-link-->
+    <script src="angular.min.js"></script>
 
     <script>
         var x = 10;
