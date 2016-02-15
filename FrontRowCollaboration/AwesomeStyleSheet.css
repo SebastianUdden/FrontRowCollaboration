@@ -1,13 +1,16 @@
 ﻿header {
-    background-color:
+    background-color:hotpink;
+    height:100px;
 }
 
 footer {
-
+    background-color:hotpink;
+    height:100px;
 }
 
 aside {
-
+    background-color:lightpink;
+    width:100px;
 }
 
 body {
@@ -18,4 +21,8 @@ body {
 
 h1{
     color:lightpink;
+}
+
+h2 {
+
 }
