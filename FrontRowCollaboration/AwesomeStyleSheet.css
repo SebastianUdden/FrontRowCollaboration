@@ -1,9 +1,21 @@
-﻿h1{
-    color:lightpink;
+﻿header {
+    background-color:
+}
+
+footer {
+
+}
+
+aside {
+
 }
 
 body {
     margin: 0 auto;
     background-color:deeppink;
     padding:20px;
+}
+
+h1{
+    color:lightpink;
 }
