@@ -18,4 +18,4 @@ function Alerts(value) {
 
 }
 
-Alerts(y);
+Alerts("Hej");
