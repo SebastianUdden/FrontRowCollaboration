@@ -2,21 +2,25 @@
 {
     document.getElementById("test").innerHTML = "test";
 
-    Alerts("Hej");
+    i = 0;
+
+
+    document.getElementById("test").addEventListener('mouseover', function () {
+        if (i < 5) {
+           
+            $("#test").animate({ left:  '+=250px', });
+            i++;
+          
+        }
+        else {
+            i = 0;
+            $("#test").css("left", "0");
+        }
+        
+    });
 }
 
-var x = 1500;
-
-x = y + x;
 
 
-function Alerts(value) {
 
-
-    for (i = 0; i < 10; i++) {
-        alert(value);
-
-    }
-
-}
 
