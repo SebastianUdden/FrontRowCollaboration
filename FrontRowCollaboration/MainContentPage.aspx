@@ -10,7 +10,7 @@
                     <li class="active"><a href="MainContentPage.aspx">Home</a></li>
                     <li><a href="MineSweeper.aspx">Minesweeper Game</a></li>
                     <li><a href="AboutMineSweeper.aspx">About Minesweeper</a></li>
-                    <li><a href="#">A map</a></li>
+                    <li><a href="SecondMinesweeper.aspx">MineSweeper Testing</a></li>
                 </ul>
             </div>
         </nav>
