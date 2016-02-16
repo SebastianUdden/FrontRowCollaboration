@@ -169,13 +169,6 @@
       <DependentUpon>MineSweeper.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="AboutMineSweeper.aspx.cs">
-      <DependentUpon>AboutMineSweeper.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="AboutMineSweeper.aspx.designer.cs">
-      <DependentUpon>AboutMineSweeper.aspx</DependentUpon>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
