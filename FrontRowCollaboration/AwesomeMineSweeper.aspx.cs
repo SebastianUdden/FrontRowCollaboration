@@ -78,11 +78,9 @@ namespace FrontRowCollaboration
 
         protected void Button_Click(object sender, EventArgs e)
         {
-            Debug.WriteLine("BUTTON CLICKED");
 
             ImageButton clickedButton = (ImageButton)sender;
-            Debug.WriteLine("Sender is: " + clickedButton.ID);
-            Debug.WriteLine("Status is: " + clickedButton.AlternateText);
+
 
             int thisID = Convert.ToInt32(clickedButton.ID);
             
@@ -94,7 +92,7 @@ namespace FrontRowCollaboration
 
             else
             {
-                //clickedButton.ImageUrl = "";
+                clickedButton.ImageUrl = "";
             }
 
             UpdateGameField();
@@ -109,31 +107,28 @@ namespace FrontRowCollaboration
                 
                 if (ib.ToolTip == "clicked")
                 {
-                    if(ib.AlternateText == "1")
+                    if(ib.AlternateText == "X")
                     {
                             
                     }
                     else if (ib.AlternateText == "2")
                     {
-
+                        ib.ImageUrl = @"https://upload.wikimedia.org/wikipedia/commons/e/e1/Minesweeper_questionmark.svg";
                     }
                     else if (ib.AlternateText == "3")
                     {
-
+                        ib.ImageUrl = @"https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Minesweeper_0.svg/76px-Minesweeper_0.svg.png";
                     }
                     else if (ib.AlternateText == "1")
                     {
 
-
+                        ib.ImageUrl = @"https://upload.wikimedia.org/wikipedia/commons/8/83/Minesweeper_flag.svg";
                     }
                     else
                     {
 
-
                     }
-
                 }
-                
             }
         }
     }
