@@ -16,6 +16,14 @@
 
     <link href="AwesomeStyleSheet.css" rel="stylesheet" />
     <script src="main.js"></script>
+    
+    <ul id="Menu">
+        <li><a href="MainContentPage.aspx" class="MenuButton" >Home</a></li>
+        <li><a href="AwesomeMineSweeper.aspx" class="MenuButton">Minesweeper Game</a></li>
+        <li><a href="AboutMineSweeper.aspx" class="MenuButton">About Minesweeper</a></li>
+        <li><a href="SecondMinesweeper.aspx" class="MenuButton">MineSweeper Testing</a></li>
+        <li><a href="WebForm6.aspx" class="MenuButton">Show Highscore</a></li>
+    </ul>
 
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>

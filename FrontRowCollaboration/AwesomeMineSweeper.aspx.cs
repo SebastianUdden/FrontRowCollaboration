@@ -131,5 +131,9 @@ namespace FrontRowCollaboration
                 }
             }
         }
+        protected void EasyMode()
+        {
+            
+        }
     }
 }
