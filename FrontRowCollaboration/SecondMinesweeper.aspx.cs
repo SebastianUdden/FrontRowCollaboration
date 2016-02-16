@@ -24,10 +24,10 @@ namespace FrontRowCollaboration
             //    Answer4 = el.Element("Answer4").Value,
             //});
 
-            DataSet ds = new DataSet();
-            ds.ReadXml("\\FrontRowCollaboration\\highscore.xml");
-            GridView3.datasource = ds;
-            GridView3.databind();
+            //DataSet ds = new DataSet();
+            //ds.ReadXml("\\FrontRowCollaboration\\highscore.xml");
+            //GridView3.datasource = ds;
+            //GridView3.databind();
 
         }
     }

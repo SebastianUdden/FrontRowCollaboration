@@ -7,8 +7,10 @@
         <li><a href="SecondMinesweeper.aspx" class="MenuButton">MineSweeper Testing</a></li>
     </ul>
     <br />
-    <br />
+    <img src="mine.jpg" />
+    <img src="flag.svg.png" />
     <ul id="DifficultyMenu">
+        <input type="button" value="Button" />
         <a href="#" class="MenuButton">Easy</a>
         <a href="#" class="MenuButton">Medium</a>
         <a href="#" class="MenuButton">Hard</a>
