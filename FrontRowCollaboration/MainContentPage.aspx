@@ -16,7 +16,9 @@
         </div>
     </nav>
 
-   <!-- <p>Hello Front Row! This team is awesome.</p>--> 
+    <p>Här är flaggbilden</p>
+    <img src="flag.svg.png" />
+     
     <input type="text" ng-model="textblock"/>
 
     <h1>This is the AngularJS connection: {{textblock}}</h1>
