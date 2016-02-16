@@ -1,21 +1,7 @@
-﻿<!--<!DOCTYPE html>
-<script src="scripts/jquery-1.9.1.js"></script>
-<script src="scripts/ai.0.15.0-build58334.js"></script>
-<script src="scripts/bootstrap.js"></script>
-
-<html ng-app>
-<head>
-    <title></title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
-    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-
-    <link href="AwesomeStyleSheet.css" rel="stylesheet" />
-    <script src="main.js"></script>
-</head>-->
-<!--<body onload="PrintName()">
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/master.Master" AutoEventWireup="true" CodeBehind="MainContentPage.aspx.cs" Inherits="FrontRowCollaboration.WebForm1" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <nav class="navbar navbar-default">
         <div class="container-fluid">
             <div class="navbar-header">
@@ -60,5 +46,4 @@
 
     </script>
     <button id="theBIGASSButton" style="width:20em; height:20em;" onclick="shitScript();"></button>
-</body>
-</html>-->
+</asp:Content>
