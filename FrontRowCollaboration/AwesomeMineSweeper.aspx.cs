@@ -10,24 +10,43 @@ namespace FrontRowCollaboration
 {
     public partial class WebForm5 : System.Web.UI.Page
     {
-        List<ImageButton> ListOfButtons = new List<ImageButton>();
+        List<ImageButton> ListOfButtons;
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            SweeperGame game = new SweeperGame();
             int gridSize = 49;
+            SweeperGame game = new SweeperGame();
+            ListOfButtons = new List<ImageButton>();
 
-            if (!IsCallback)
+            createGameField(gridSize);
+
+        }
+
+        protected void bStartNewGame_Click(object sender, EventArgs e)
+        {
+            int gridSize = 49;
+            StartNewGame(gridSize);
+        }
+
+        protected void StartNewGame(int gridSize)
+        {
+
+            Debug.WriteLine("Created gamefield");
+
+            SweeperGame game = new SweeperGame();
+
+            try
             {
-                createGameField(gridSize);
-
-                try
+                if (ListOfButtons != null)
                 {
-                    if(ListOfButtons != null)
-                        game.GenerateRandomMines(ListOfButtons);
-                    
-                } catch (Exception ex) { Debug.WriteLine(ex.Message); }
+                    game.GenerateRandomMines(ListOfButtons);
+                    Debug.WriteLine("Generated random");
+                }
+                else
+                    Debug.WriteLine("BUTTON IS NULL");
+
             }
+            catch (Exception ex) { Debug.WriteLine(ex.Message); }
 
         }
 
@@ -38,7 +57,7 @@ namespace FrontRowCollaboration
             for (int i = 1; i <= gridSize; i++)
             {
                 tb = new ImageButton();
-                tb.ID = "Btn" + i.ToString();
+                tb.ID = i.ToString();
                 tb.Width = 40;
                 tb.Height = 40;
                 tb.BackColor = System.Drawing.Color.White;
@@ -48,28 +67,73 @@ namespace FrontRowCollaboration
                 tb.Click += new ImageClickEventHandler(this.Button_Click);
 
                 gameField.Controls.Add(tb);
+
+                Debug.WriteLine("Adding list of buttons");
                 ListOfButtons.Add(tb);
-                    
             }
 
             gameField.Width = (int)(Math.Sqrt(gridSize) * 40);
             gameField.Height = gameField.Width;
-
         }
 
         protected void Button_Click(object sender, EventArgs e)
         {
+            Debug.WriteLine("BUTTON CLICKED");
 
-            foreach(ImageButton ib in ListOfButtons)
-            {
-                   ib.ToolTip = ib.AlternateText;
-            }
-
-            ImageButton clickedButton = (ImageButton) sender;
-
+            ImageButton clickedButton = (ImageButton)sender;
             Debug.WriteLine("Sender is: " + clickedButton.ID);
             Debug.WriteLine("Status is: " + clickedButton.AlternateText);
 
+            int thisID = Convert.ToInt32(clickedButton.ID);
+            
+            if(clickedButton.AlternateText == "X")
+            {
+                clickedButton.ImageUrl = @"http://media2.androidappsgame.com/1/214881/com-jipsaan-minesweeper-214881.jpg";
+                clickedButton.ToolTip = "clicked";
+            }
+
+            else
+            {
+                //clickedButton.ImageUrl = "";
+            }
+
+            UpdateGameField();
+
+        }
+
+        protected void UpdateGameField()
+        {
+            
+            foreach(ImageButton ib in ListOfButtons)
+            {
+                
+                if (ib.ToolTip == "clicked")
+                {
+                    if(ib.AlternateText == "1")
+                    {
+                            
+                    }
+                    else if (ib.AlternateText == "2")
+                    {
+
+                    }
+                    else if (ib.AlternateText == "3")
+                    {
+
+                    }
+                    else if (ib.AlternateText == "1")
+                    {
+
+                    }
+                    else
+                    {
+
+
+                    }
+
+                }
+                
+            }
         }
     }
 }

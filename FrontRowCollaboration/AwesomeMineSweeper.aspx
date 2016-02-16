@@ -20,4 +20,5 @@
     <asp:Panel ID="gameField" runat="server" Height="50px" Width="50px">
 
     </asp:Panel>
+    <asp:Button ID="bStartNewGame" runat="server" OnClick="bStartNewGame_Click" Text="Start New Game" />
     </asp:Content>
