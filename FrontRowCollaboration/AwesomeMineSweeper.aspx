@@ -11,5 +11,4 @@
     <asp:Panel ID="gameField" runat="server" Height="50px" Width="50px">
 
     </asp:Panel>
-    <asp:Button ID="Button1" runat="server" Height="50px" OnClick="Button1_Click" Text="testbutton" Width="100px" />
-</asp:Content>
+    </asp:Content>

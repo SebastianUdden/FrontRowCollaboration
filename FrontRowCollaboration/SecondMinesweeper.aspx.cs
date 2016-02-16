@@ -26,8 +26,8 @@ namespace FrontRowCollaboration
 
             DataSet ds = new DataSet();
             ds.ReadXml("\\FrontRowCollaboration\\highscore.xml");
-            GridView3.datasource = ds;
-            GridView3.databind();
+            //GridView3.datasource = ds;
+            //GridView3.databind();
 
         }
     }

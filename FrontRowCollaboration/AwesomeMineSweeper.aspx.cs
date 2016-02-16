@@ -45,6 +45,8 @@ namespace FrontRowCollaboration
 
                 tb.ImageUrl = "http://reform.no/wp-content/uploads/2014/07/582616_468039903243747_963752385_n.jpg";
 
+                tb.Click += new ImageClickEventHandler(this.Button_Click);
+
                 gameField.Controls.Add(tb);
                 ListOfButtons.Add(tb);
                     
@@ -55,15 +57,18 @@ namespace FrontRowCollaboration
 
         }
 
-        protected void Button1_Click(object sender, EventArgs e)
+        protected void Button_Click(object sender, EventArgs e)
         {
-            //some testing
-            ListOfButtons.ElementAt(0).ImageUrl = "";
-            ListOfButtons.ElementAt(2).ImageUrl = "";
-            ListOfButtons.ElementAt(5).ImageUrl = "";
 
-            Debug.WriteLine("Sender is: " + sender.ToString());
-            Debug.WriteLine("Arg is: " + e.ToString());
+            foreach(ImageButton ib in ListOfButtons)
+            {
+                   ib.ToolTip = ib.AlternateText;
+            }
+
+            ImageButton clickedButton = (ImageButton) sender;
+
+            Debug.WriteLine("Sender is: " + clickedButton.ID);
+            Debug.WriteLine("Status is: " + clickedButton.AlternateText);
 
         }
     }
