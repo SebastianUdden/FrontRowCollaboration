@@ -12,24 +12,21 @@ namespace FrontRowCollaboration
 {
     public class SweeperGame
     {
-
         public void GenerateRandomMines(List<ImageButton> buttons)
         {
             Random random = new Random();
             Thread.Sleep(100);
             int minesCount = buttons.Count() / 5;
 
-
             while(minesCount > 0)
             { 
                 int thisRandom = random.Next(1, (buttons.Count + 1));
 
-                if(buttons.ElementAt(thisRandom).AlternateText == "")
+                if(buttons.ElementAt(thisRandom - 1).AlternateText == "")
                 {
-                    buttons.ElementAt(thisRandom).AlternateText = "X";
+                    buttons.ElementAt(thisRandom - 1).AlternateText = "X";
                     minesCount--;
                 }               
-
             }
         }
     }
