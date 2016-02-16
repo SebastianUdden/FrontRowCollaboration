@@ -7,6 +7,7 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
      <br /> 
 
+
     <div id="difficultyButtons">
             <label>
                 <input type="radio" class="sepButton" name="difficulty" value="Easy">
