@@ -35,11 +35,21 @@ namespace FrontRowCollaboration
 
             SweeperGame game = new SweeperGame();
 
+            int minesCount = ListOfButtons.Count() / 2;
+
+            if (rbEasy.Checked)
+                minesCount = ListOfButtons.Count() / 8;
+            else if (rbMedium.Checked)
+                minesCount = ListOfButtons.Count() / 4;
+            else if (rbHard.Checked)
+                minesCount = ListOfButtons.Count() / 2;
+            
+
             try
             {
                 if (ListOfButtons != null)
                 {
-                    game.GenerateRandomMines(ListOfButtons, (ListOfButtons.Count() / 3));
+                    game.GenerateRandomMines(ListOfButtons, (minesCount));
                     Debug.WriteLine("Generated random");
                 }
                 else
