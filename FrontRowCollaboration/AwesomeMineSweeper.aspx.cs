@@ -11,10 +11,20 @@ namespace FrontRowCollaboration
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+
+            if (!IsCallback)
+                createGameField();
+            
+
+        }
+
+
+        protected void createGameField()
+        {
             ImageButton tb = new ImageButton();
             List<ImageButton> lb = new List<ImageButton>();
 
-            for (int i = 1; i <= 12; i++)
+            for (int i = 1; i <= 48; i++)
             {
                 tb = new ImageButton();
                 tb.ID = "Btn" + i.ToString();
@@ -27,7 +37,9 @@ namespace FrontRowCollaboration
                 gameField.Controls.Add(tb);
             }
 
-            gameField.Width = 160;
+            gameField.Width = 320;
+            
+
         }
     }
 }

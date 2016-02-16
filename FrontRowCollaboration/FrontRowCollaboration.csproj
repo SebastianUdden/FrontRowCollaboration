@@ -121,6 +121,7 @@
     <Content Include="MineSweeper.aspx" />
     <Content Include="SecondMinesweeper.aspx" />
     <Content Include="AwesomeMineSweeper.aspx" />
+    <Content Include="highscore.xml" />
     <None Include="scripts\jquery-1.9.1.intellisense.js" />
     <Content Include="scripts\bootstrap.js" />
     <Content Include="scripts\bootstrap.min.js" />
