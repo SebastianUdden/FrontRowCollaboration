@@ -6,6 +6,7 @@
         <li><a href="AwesomeMineSweeper.aspx" class="MenuButton">Minesweeper Game</a></li>
         <li><a href="AboutMineSweeper.aspx" class="MenuButton">About Minesweeper</a></li>
         <li><a href="SecondMinesweeper.aspx" class="MenuButton">MineSweeper Testing</a></li>
+        <li><a href="WebForm6.aspx" class="MenuButton">Show Highscore</a></li>
     </ul>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
