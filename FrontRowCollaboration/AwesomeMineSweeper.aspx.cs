@@ -71,5 +71,9 @@ namespace FrontRowCollaboration
             Debug.WriteLine("Status is: " + clickedButton.AlternateText);
 
         }
+        protected void EasyMode()
+        {
+            
+        }
     }
 }

@@ -1,13 +1,6 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Master.Master" AutoEventWireup="true" CodeBehind="AboutMineSweeper.aspx.cs" Inherits="FrontRowCollaboration.WebForm3" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-    <ul id="Menu">
-        <li><a href="MainContentPage.aspx" class="MenuButton" >Home</a></li>
-        <li><a href="AwesomeMineSweeper.aspx" class="MenuButton">Minesweeper Game</a></li>
-        <li><a href="AboutMineSweeper.aspx" class="MenuButton">About Minesweeper</a></li>
-        <li><a href="SecondMinesweeper.aspx" class="MenuButton">MineSweeper Testing</a></li>
-        <li><a href="WebForm6.aspx" class="MenuButton">Show Highscore</a></li>
-    </ul>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
         

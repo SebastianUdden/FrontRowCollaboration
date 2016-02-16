@@ -94,6 +94,8 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Pictures\76px-Minesweeper_1.svg.png" />
+    <Content Include="Pictures\76px-Minesweeper_2.svg.png" />
     <Content Include="Pictures\76px-Minesweeper_flag.svg.png" />
     <Content Include="angular.min.js" />
     <Content Include="AwesomeStyleSheet.css" />
