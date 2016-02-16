@@ -117,6 +117,7 @@
     <Content Include="Content\bootstrap-theme.css.map" />
     <Content Include="Master.Master" />
     <Content Include="MainContentPage.aspx" />
+    <Content Include="MineSweeper.aspx" />
     <None Include="scripts\jquery-1.9.1.intellisense.js" />
     <Content Include="scripts\bootstrap.js" />
     <Content Include="scripts\bootstrap.min.js" />
@@ -155,6 +156,13 @@
     </Compile>
     <Compile Include="MainContentPage.aspx.designer.cs">
       <DependentUpon>MainContentPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MineSweeper.aspx.cs">
+      <DependentUpon>MineSweeper.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MineSweeper.aspx.designer.cs">
+      <DependentUpon>MineSweeper.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

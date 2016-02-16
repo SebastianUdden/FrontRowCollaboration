@@ -1,25 +1,27 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/master.Master" AutoEventWireup="true" CodeBehind="MainContentPage.aspx.cs" Inherits="FrontRowCollaboration.WebForm1" %>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="#">Front Row Collaboration Official Website</a>
+                </div>
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="MainContentPage.aspx">Home</a></li>
+                    <li><a href="MineSweeper.aspx">Minesweeper Game</a></li>
+                    <li><a href="#">Link to google</a></li>
+                    <li><a href="#">A map</a></li>
+                </ul>
+            </div>
+        </nav>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <nav class="navbar navbar-default">
-        <div class="container-fluid">
-            <div class="navbar-header">
-                <a class="navbar-brand" href="#">Front Row Collaboration Official Website</a>
-            </div>
-            <ul class="nav navbar-nav">
-                <li class="active"><a href="#">Home</a></li>
-                <li><a href="#">Usless Information</a></li>
-                <li><a href="#">Link to google</a></li>
-                <li><a href="#">A map</a></li>
-            </ul>
-        </div>
-    </nav>
+
 
     <p>Här är flaggbilden</p>
     <img src="flag.svg.png" />
-     
-    <input type="text" ng-model="textblock"/>
+
+    <input type="text" ng-model="textblock" />
 
     <h1>This is the AngularJS connection: {{textblock}}</h1>
     <p id="test">Click here</p>
@@ -47,5 +49,5 @@
         }
 
     </script>
-    <button id="theBIGASSButton" style="width:20em; height:20em;" onclick="shitScript();"></button>
+    <button id="theBIGASSButton" style="width: 20em; height: 20em;" onclick="shitScript();"></button>
 </asp:Content>
