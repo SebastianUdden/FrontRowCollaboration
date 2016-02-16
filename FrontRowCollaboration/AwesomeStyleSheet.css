@@ -31,14 +31,21 @@
     background-color:yellow;
 }
 
+#DifficultyMenu {
+      -webkit-transition: background-color 1000ms linear;
+    background-color:orangered;
+    margin: 0px auto;
+    font-size:0px;
+}
+
 #theBIGASSButton {
-    -webkit-transition:background-color 1500ms linear;
+    -webkit-transition:background-color 800ms linear;
     background-color:#808080;
 }
 
 
 #theBIGASSButton:hover {
-    -webkit-transition:background-color 1500ms linear;
+    -webkit-transition:background-color 800ms linear;
     background-color:#f31e00;
 }
 

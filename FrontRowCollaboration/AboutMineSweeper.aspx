@@ -20,8 +20,7 @@
         <p>Klickar man på en ruta som inte innehåller en mina ska denna och intilliggande tomma rutor rensas.
         Rutor som gränsar till eller innehåller en eller flera minor ska inte rensas. I rutor som gränsar till en
         mina ska antalet minor den angränsar till skrivas ut. Ett högerklick ska markera att rutan innehåller
-        en mina. Spelet är vunnet när alla minor är markerade och samtliga tomma rutor rensade.
-        Exempel på spel.</p>
+        en mina. Spelet är vunnet när alla minor är markerade och samtliga tomma rutor rensade.</p>
 
         <h2>Extra</h2>
         <p>Man ska kunna spara spel för att senare kunna fortsätta.</p>

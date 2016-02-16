@@ -6,6 +6,13 @@
         <li><a href="AboutMineSweeper.aspx" class="MenuButton">About Minesweeper</a></li>
         <li><a href="SecondMinesweeper.aspx" class="MenuButton">MineSweeper Testing</a></li>
     </ul>
+    <br />
+    <br />
+    <ul id="DifficultyMenu">
+        <a href="#" class="MenuButton">Easy</a>
+        <a href="#" class="MenuButton">Medium</a>
+        <a href="#" class="MenuButton">Hard</a>
+    </ul>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <asp:Panel ID="gameField" runat="server" Height="50px" Width="50px">
