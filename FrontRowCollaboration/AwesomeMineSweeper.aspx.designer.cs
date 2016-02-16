@@ -13,6 +13,33 @@ namespace FrontRowCollaboration {
     public partial class WebForm5 {
         
         /// <summary>
+        /// rbEasy control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlInputRadioButton rbEasy;
+        
+        /// <summary>
+        /// rbMedium control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlInputRadioButton rbMedium;
+        
+        /// <summary>
+        /// rbHard control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlInputRadioButton rbHard;
+        
+        /// <summary>
         /// gameField control.
         /// </summary>
         /// <remarks>
