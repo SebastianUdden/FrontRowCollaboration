@@ -4,6 +4,9 @@ using System.Linq;
 using System.Web;
 using System.Diagnostics;
 using System.Threading;
+using System.Web;
+using System.Web.UI;
+using System.Web.UI.WebControls;
 
 namespace FrontRowCollaboration
 {
@@ -11,13 +14,15 @@ namespace FrontRowCollaboration
     {
 
         
-
-        public void GenerateRandomMines(int gridSize)
+        public void GenerateRandomMines(List<ImageButton> buttons)
         {
             Random random = new Random();
             Thread.Sleep(100);
+            
+            foreach(ImageButton tIb in buttons)
+                //do stuff
 
-            throw new NotImplementedException("TODO");
+
 
 
         }
