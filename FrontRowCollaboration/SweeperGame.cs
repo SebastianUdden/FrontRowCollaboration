@@ -12,11 +12,11 @@ namespace FrontRowCollaboration
 {
     public class SweeperGame
     {
-        public void GenerateRandomMines(List<ImageButton> buttons)
+        public void GenerateRandomMines(List<ImageButton> buttons, int numberOfMines)
         {
             Random random = new Random();
             Thread.Sleep(100);
-            int minesCount = buttons.Count() / 2;
+            int minesCount = numberOfMines;
 
             while(minesCount > 0)
             { 
@@ -36,7 +36,8 @@ namespace FrontRowCollaboration
         {
             //7 x 7
 
-            for(int i = 0; i < buttons.Count(); i++)
+            #region bizzare if-logic 
+            for (int i = 0; i < buttons.Count(); i++)
             {
                 int thisCount = 0;
 
@@ -671,6 +672,9 @@ namespace FrontRowCollaboration
                 }
 
             }
+
+            #endregion
+
         }
     }
 }
