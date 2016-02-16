@@ -5,79 +5,104 @@
 }
 
 #Menu {
-     -webkit-transition: background-color 1000ms linear;
-    background-color:orangered;
+    -webkit-transition: background-color 1000ms linear;
+    background-color: orangered;
     margin: 0px auto;
-    font-size:0px;
+    font-size: 0px;
 }
 
-#Menu li {
-    display:inline-block;
-    font-size:x-large;
-}
+    #Menu li {
+        display: inline-block;
+        font-size: x-large;
+    }
 
 .MenuButton {
-     -webkit-transition: background-color 1500ms linear;
-    color:black;
-    text-decoration:none;
-    padding:4px;
+    -webkit-transition: background-color 1500ms linear;
+    color: black;
+    text-decoration: none;
+    padding: 4px;
     margin: 0 auto;
-    background-color:orangered;
+    background-color: orangered;
 }
 
-.MenuButton:hover {
-    text-decoration:none;
-    -webkit-transition:background-color 1500ms linear;
-    background-color:yellow;
-}
+    .MenuButton:hover {
+        text-decoration: none;
+        -webkit-transition: background-color 1500ms linear;
+        background-color: yellow;
+    }
 
 #DifficultyMenu {
-      -webkit-transition: background-color 1000ms linear;
-    background-color:orangered;
+    -webkit-transition: background-color 1000ms linear;
+    background-color: orangered;
     margin: 0px auto;
-    font-size:0px;
+    font-size: 0px;
+}
+
+input[type=radio] {
+    opacity: 0;
+    z-index: 9999;
+}
+
+    input[type=radio]:checked + .overlay {
+        background-color: yellow;
+    }
+
+.sepButton {
+    display:inline;
+}
+
+
+.overlay {
+    
+    text-align: center;
+    width: 100px;
+    -webkit-transition: background-color 1500ms linear;
+    color: black;
+    text-decoration: none;
+    padding: 10px;
+    margin: 0 auto;
+    background-color: orangered;
 }
 
 #theBIGASSButton {
-    -webkit-transition:background-color 800ms linear;
-    background-color:#808080;
+    -webkit-transition: background-color 800ms linear;
+    background-color: #808080;
 }
 
 
-#theBIGASSButton:hover {
-    -webkit-transition:background-color 800ms linear;
-    background-color:#f31e00;
-}
+    #theBIGASSButton:hover {
+        -webkit-transition: background-color 800ms linear;
+        background-color: #f31e00;
+    }
 
 header {
-    background-color:orangered;
-    height:100px;
+    background-color: orangered;
+    height: 100px;
 }
 
-footer {
-    background-color:orangered;
+#footer {
+    background-color: orangered;
+    clear:both;
 }
 
 aside {
-    background-color:orangered;
-    height:80%;
+    background-color: orangered;
+    height: 80%;
 }
 
 body {
     margin: 0 auto;
-    background-color:white;
+    background-color: white;
 }
 
-h1{
-    color:black;
+h1 {
+    color: black;
 }
 
 h2 {
-    color:black;
+    color: black;
 }
 
 #test {
-
-    position: absolute; 
-
+    position: absolute;
 }
