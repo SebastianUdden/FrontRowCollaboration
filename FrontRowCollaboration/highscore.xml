@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<root>
+  <player>
+    <name>player1</name>
+    <score>100</score>
+  </player>
+  <player>
+  <name>player2</name>
+  <score>75</score>
+  </player>
+</root>
