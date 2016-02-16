@@ -94,16 +94,18 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Pictures\76px-Minesweeper_flag.svg.png" />
     <Content Include="angular.min.js" />
     <Content Include="AwesomeStyleSheet.css" />
+    <Content Include="Pictures\Clicked_MineSweeper.png" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
-    <Content Include="flag.svg.png" />
+    <Content Include="Pictures\flag.svg.png" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="main.js" />
-    <Content Include="mine.jpg" />
+    <Content Include="Pictures\mine.jpg" />
     <Content Include="packages.config" />
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
@@ -120,6 +122,8 @@
     <Content Include="MainContentPage.aspx" />
     <Content Include="AboutMineSweeper.aspx" />
     <Content Include="MineSweeper.aspx" />
+    <Content Include="Pictures\76px-Minesweeper_questionmark.svg.png" />
+    <Content Include="Pictures\NotClicked_MineSweeper.png" />
     <Content Include="SecondMinesweeper.aspx" />
     <Content Include="AwesomeMineSweeper.aspx" />
     <Content Include="highscore.xml" />
