@@ -8,7 +8,7 @@
                 </div>
                 <ul class="nav navbar-nav">
                     <li class="active"><a href="MainContentPage.aspx">Home</a></li>
-                    <li><a href="MineSweeper.aspx">Minesweeper Game</a></li>
+                    <li><a href="AwesomeMineSweeper.aspx">Minesweeper Game</a></li>
                     <li><a href="AboutMineSweeper.aspx">About Minesweeper</a></li>
                     <li><a href="SecondMinesweeper.aspx">MineSweeper Testing</a></li>
                 </ul>
