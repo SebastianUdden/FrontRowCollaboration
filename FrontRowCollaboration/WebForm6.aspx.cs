@@ -12,9 +12,10 @@ namespace FrontRowCollaboration
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            string path = HttpContext.Current.Request.MapPath("~/highscore.xml");
 
             DataSet ds = new DataSet();
-            ds.ReadXml(@"C:\Users\Administrator\Documents\Visual Studio 2015\Projects\FrontRowCollaboration\FrontRowCollaboration\highscore.xml");
+            ds.ReadXml(path);
             GridView1.DataSource = ds;
             GridView1.DataBind();
 
