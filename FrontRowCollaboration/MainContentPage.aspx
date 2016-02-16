@@ -1,29 +1,32 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/master.Master" AutoEventWireup="true" CodeBehind="MainContentPage.aspx.cs" Inherits="FrontRowCollaboration.WebForm1" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-        <nav class="navbar navbar-default">
-            <div class="container-fluid">
-                <div class="navbar-header">
-                    <a class="navbar-brand" href="#">Front Row Collaboration Official Website</a>
-                </div>
-                <ul class="nav navbar-nav">
-                    <li class="active"><a href="MainContentPage.aspx">Home</a></li>
-                    <li><a href="AwesomeMineSweeper.aspx">Minesweeper Game</a></li>
-                    <li><a href="AboutMineSweeper.aspx">About Minesweeper</a></li>
-                    <li><a href="SecondMinesweeper.aspx">MineSweeper Testing</a></li>
-                </ul>
-            </div>
-        </nav>
+    <ul id="Menu">
+        <li><a href="MainContentPage.aspx" class="MenuButton" >Home</a></li>
+        <li><a href="AwesomeMineSweeper.aspx" class="MenuButton">Minesweeper Game</a></li>
+        <li><a href="AboutMineSweeper.aspx" class="MenuButton">About Minesweeper</a></li>
+        <li><a href="SecondMinesweeper.aspx" class="MenuButton">MineSweeper Testing</a></li>
+    </ul>
+
+<%--    <%--<nav class="navbar navbar-default">--%>
+    <%--<div class="container-fluid">--%>
+    <%--<div class="navbar-header">
+                    <a class="navbar-brand" href="#">Front Row Collaboration Official Website</a>--%>
+    <%--</div>--%>
+    <%--<ul class="nav navbar-nav">--%>
+    
+    <%--</ul>--%>
+    <%--</div>--%>
+    <%--</nav>--%>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
-
-    <p>Här är flaggbilden</p>
+    <br />
     <img src="flag.svg.png" />
 
     <input type="text" ng-model="textblock" />
 
-    <h1>This is the AngularJS connection: {{textblock}}</h1>
+    <h3>AngularJS connection: {{textblock}}</h3>
     <p id="test">Click here</p>
     <!--This is the aside-->
 
@@ -32,8 +35,6 @@
     <br />
     <aside>The ASIDE</aside>
 
-    <!--This is the footer-->
-    <footer>The FOOTER</footer>
 
     <!--AngularJS-link-->
     <script src="angular.min.js"></script>
@@ -49,5 +50,8 @@
         }
 
     </script>
-    <button id="theBIGASSButton" style="width: 20em; height: 20em;" onclick="shitScript();"></button>
+    <button id="theBIGASSButton" style="width: 100%; height: 20em;" onclick="shitScript();"></button>
+    
+    <!--This is the footer-->
+    <footer>The FOOTER</footer>
 </asp:Content>
