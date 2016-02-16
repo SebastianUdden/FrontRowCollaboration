@@ -9,7 +9,7 @@
                 <ul class="nav navbar-nav">
                     <li class="active"><a href="MainContentPage.aspx">Home</a></li>
                     <li><a href="MineSweeper.aspx">Minesweeper Game</a></li>
-                    <li><a href="#">Link to google</a></li>
+                    <li><a href="AboutMineSweeper.aspx">About Minesweeper</a></li>
                     <li><a href="#">A map</a></li>
                 </ul>
             </div>
