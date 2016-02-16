@@ -6,7 +6,7 @@
         <li><a href="AwesomeMineSweeper.aspx" class="MenuButton">Minesweeper Game</a></li>
         <li><a href="AboutMineSweeper.aspx" class="MenuButton">About Minesweeper</a></li>
         <li><a href="SecondMinesweeper.aspx" class="MenuButton">MineSweeper Testing</a></li>
-    </ul>
+                </ul>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <h1>This is the testing ground</h1>
@@ -29,5 +29,11 @@
     </asp:GridView>
     <asp:XmlDataSource ID="highscore" runat="server" DataFile="~/highscore.xml"></asp:XmlDataSource>
 
+        <asp:GridView ID="GridView3" CssClass="table" runat="server" AutoGenerateColumns="false">
+        <Columns>
+            <asp:BoundField DataField="name" HeaderText="name" />
+            <asp:BoundField DataField="score" HeaderText="score" />
+        </Columns>
+    </asp:GridView>
 
 </asp:Content>

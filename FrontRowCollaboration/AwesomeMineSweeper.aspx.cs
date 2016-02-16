@@ -61,6 +61,10 @@ namespace FrontRowCollaboration
             ListOfButtons.ElementAt(0).ImageUrl = "";
             ListOfButtons.ElementAt(2).ImageUrl = "";
             ListOfButtons.ElementAt(5).ImageUrl = "";
+
+            Debug.WriteLine("Sender is: " + sender.ToString());
+            Debug.WriteLine("Arg is: " + e.ToString());
+
         }
     }
 }
