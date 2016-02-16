@@ -14,7 +14,7 @@ namespace FrontRowCollaboration
         {
 
             DataSet ds = new DataSet();
-            ds.ReadXml(@"C:\Users\Administrator\Source\Repos\FrontRowCollaboration\FrontRowCollaboration\bin\highscore.xml");
+            ds.ReadXml(@"C:\Users\Administrator\Documents\Visual Studio 2015\Projects\FrontRowCollaboration\FrontRowCollaboration\highscore.xml");
             GridView1.DataSource = ds;
             GridView1.DataBind();
 

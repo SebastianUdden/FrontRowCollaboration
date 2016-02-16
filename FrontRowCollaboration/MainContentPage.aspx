@@ -6,6 +6,7 @@
         <li><a href="AwesomeMineSweeper.aspx" class="MenuButton">Minesweeper Game</a></li>
         <li><a href="AboutMineSweeper.aspx" class="MenuButton">About Minesweeper</a></li>
         <li><a href="SecondMinesweeper.aspx" class="MenuButton">MineSweeper Testing</a></li>
+        <li><a href="WebForm6.aspx" class="MenuButton">Show Highscore</a></li>
     </ul>
 
 <%--    <%--<nav class="navbar navbar-default">--%>
@@ -62,5 +63,4 @@
     <button id="theBIGASSButton" style="width: 100%; height: 20em;" onclick="shitScript();"></button>
     
     <!--This is the footer-->
-    <footer>The FOOTER</footer>
 </asp:Content>

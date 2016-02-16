@@ -5,10 +5,10 @@
         <li><a href="AwesomeMineSweeper.aspx" class="MenuButton">Minesweeper Game</a></li>
         <li><a href="AboutMineSweeper.aspx" class="MenuButton">About Minesweeper</a></li>
         <li><a href="SecondMinesweeper.aspx" class="MenuButton">MineSweeper Testing</a></li>
+        <li><a href="WebForm6.aspx" class="MenuButton">Show Highscore</a></li>
     </ul>
     <br />
-    <img src="mine.jpg" />
-    <img src="flag.svg.png" />
+    <br />
     <ul id="DifficultyMenu">
         <input type="button" value="Button" />
         <a href="#" class="MenuButton">Easy</a>
@@ -18,6 +18,5 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <asp:Panel ID="gameField" runat="server" Height="50px" Width="50px">
-
     </asp:Panel>
     </asp:Content>
