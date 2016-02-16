@@ -13,20 +13,38 @@ namespace FrontRowCollaboration
     public class SweeperGame
     {
 
-        
         public void GenerateRandomMines(List<ImageButton> buttons)
         {
             Random random = new Random();
             Thread.Sleep(100);
-            
-            foreach(ImageButton tIb in buttons)
-                //do stuff
 
+            int amountOf3 = 0;
+            int amountOf2 = 0;
+            int amountOf1 = 0; 
 
+            while((amountOf3 > 0) || (amountOf2 > 0) || (amountOf1 > 0)) 
+            { 
+                int thisRandom = random.Next(1, (buttons.Count() + 1));
 
-
+                if(buttons.ElementAt(thisRandom).AlternateText == "")
+                {
+                    if(amountOf3 > 0)
+                    { 
+                        buttons.ElementAt(thisRandom).AlternateText = "3";
+                        amountOf3 = amountOf3 - 1;
+                    }
+                    else if(amountOf2 > 0)
+                    {
+                        buttons.ElementAt(thisRandom).AlternateText = "3";
+                        amountOf2 = amountOf2 - 1;
+                    }
+                    else if (amountOf1 > 0)
+                    {
+                        buttons.ElementAt(thisRandom).AlternateText = "3";
+                        amountOf1 = amountOf1 - 1;
+                    }
+                }               
+            }
         }
-
-
     }
 }
