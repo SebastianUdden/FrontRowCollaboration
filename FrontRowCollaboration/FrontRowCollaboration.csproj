@@ -183,6 +183,7 @@
     <Compile Include="AwesomeMineSweeper.aspx.designer.cs">
       <DependentUpon>AwesomeMineSweeper.aspx</DependentUpon>
     </Compile>
+    <Compile Include="SweeperGame.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
