@@ -103,6 +103,7 @@
     <Content Include="flag.svg.png" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="main.js" />
+    <Content Include="mine.jpg" />
     <Content Include="packages.config" />
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

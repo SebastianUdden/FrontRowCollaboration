@@ -18,17 +18,17 @@ namespace FrontRowCollaboration
             Random random = new Random();
             Thread.Sleep(100);
             int minesCount = buttons.Count() / 5;
-        
+
 
             while(minesCount > 0)
-            {
+            { 
                 int thisRandom = random.Next(1, (buttons.Count + 1));
-       
+
                 if(buttons.ElementAt(thisRandom).AlternateText == "")
                 {
                     buttons.ElementAt(thisRandom).AlternateText = "X";
                     minesCount--;
-                }
+                }               
 
             }
         }

@@ -25,7 +25,9 @@
     <img src="flag.svg.png" />
 
     <input type="text" ng-model="textblock" />
-
+    <img src="mine.jpg" />
+    <p>Mine URL = http://media2.androidappsgame.com/1/214881/com-jipsaan-minesweeper-214881.jpg </p>
+    <p>Flag URL = https://upload.wikimedia.org/wikipedia/commons/8/83/Minesweeper_flag.svg </p>
     <h3>AngularJS connection: {{textblock}}</h3>
     <p id="test">Click here</p>
     <!--This is the aside-->
