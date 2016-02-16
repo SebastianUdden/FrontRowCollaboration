@@ -120,6 +120,7 @@
     <Content Include="AboutMineSweeper.aspx" />
     <Content Include="MineSweeper.aspx" />
     <Content Include="SecondMinesweeper.aspx" />
+    <Content Include="AwesomeMineSweeper.aspx" />
     <None Include="scripts\jquery-1.9.1.intellisense.js" />
     <Content Include="scripts\bootstrap.js" />
     <Content Include="scripts\bootstrap.min.js" />
@@ -173,6 +174,13 @@
     <Compile Include="SecondMinesweeper.aspx.cs">
       <DependentUpon>SecondMinesweeper.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AwesomeMineSweeper.aspx.cs">
+      <DependentUpon>AwesomeMineSweeper.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AwesomeMineSweeper.aspx.designer.cs">
+      <DependentUpon>AwesomeMineSweeper.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
