@@ -9,7 +9,6 @@
 
 namespace FrontRowCollaboration {
     
-    
     public partial class WebForm5 {
         
         /// <summary>
