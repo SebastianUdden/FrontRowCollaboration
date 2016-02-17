@@ -15,7 +15,7 @@
         <div>
             <div id="clock">{{timer}}</div>
             <%--<input type="button" onclick="toggleTimer()" text="start"/>--%>
-            <button onclick="return false;" ng-click="toggleTimer()">{{mode}}</button>
+            <button id="TimeButton" onclick="return false;" ng-click="toggleTimer()">{{mode}}</button>
         </div>
         <div>
             <table>
