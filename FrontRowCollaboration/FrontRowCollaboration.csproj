@@ -94,6 +94,7 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="ClockPage.aspx" />
     <Content Include="Pictures\76px-Minesweeper_1.svg.png" />
     <Content Include="Pictures\76px-Minesweeper_2.svg.png" />
     <Content Include="Pictures\76px-Minesweeper_flag.svg.png" />
@@ -130,6 +131,7 @@
     <Content Include="AwesomeMineSweeper.aspx" />
     <Content Include="highscore.xml" />
     <Content Include="WebForm6.aspx" />
+    <Content Include="WebForm7.aspx" />
     <None Include="scripts\jquery-1.9.1.intellisense.js" />
     <Content Include="scripts\bootstrap.js" />
     <Content Include="scripts\bootstrap.min.js" />
@@ -151,6 +153,13 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ClockPage.aspx.cs">
+      <DependentUpon>ClockPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ClockPage.aspx.designer.cs">
+      <DependentUpon>ClockPage.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -198,6 +207,13 @@
     </Compile>
     <Compile Include="WebForm6.aspx.designer.cs">
       <DependentUpon>WebForm6.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForm7.aspx.cs">
+      <DependentUpon>WebForm7.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForm7.aspx.designer.cs">
+      <DependentUpon>WebForm7.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

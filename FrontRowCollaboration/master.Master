@@ -5,17 +5,18 @@
 <script src="scripts/ai.0.15.0-build58334.js"></script>
 <script src="scripts/bootstrap.js"></script>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html lang="en">
 <head runat="server">
-    <title></title>
+    <title>AWESOMESWEEPER</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <%--<script src="main.js"></script>--%>
+
 
     <link href="AwesomeStyleSheet.css" rel="stylesheet" />
-    <script src="main.js"></script>
 
     <ul id="Menu">
         <li><a href="MainContentPage.aspx" class="MenuButton">Home</a></li>
@@ -28,15 +29,19 @@
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
 </head>
-<div id="Wrapper">
-    <body onload="PrintName()">
+<body <%--onload="PrintName()"--%> ng-app="cbTimer">
+    <div id="Wrapper">
         <form id="form1" runat="server">
+            
             <div>
                 <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
                 </asp:ContentPlaceHolder>
             </div>
+
+
             <div id="footer">The FOOTER</div>
         </form>
-    </body>
-</div>
+    </div>
+</body>
+
 </html>

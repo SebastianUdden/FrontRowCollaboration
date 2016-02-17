@@ -2,12 +2,14 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
-<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server" >
 
+
+    
     <br />
     <img src="flag.svg.png" />
 
-    <input type="text" ng-model="textblock" />
+    <%--<input type="text" ng-model="textblock" />--%>
     <img src="Pictures/mine.jpg" />
     <img src="Pictures/76px-Minesweeper_questionmark.svg.png" />
     <img src="Pictures/Clicked_MineSweeper.png" />
@@ -22,7 +24,7 @@
     <p>1 square URL = https://upload.wikimedia.org/wikipedia/commons/c/ca/Minesweeper_1.svg </p>
     <p>2 square URL = https://upload.wikimedia.org/wikipedia/commons/4/44/Minesweeper_2.svg </p>
     <p>Unopened square URL = https://upload.wikimedia.org/wikipedia/commons/c/c7/Minesweeper_unopened_square.svg </p>
-    <h3>AngularJS connection: {{textblock}}</h3>
+    <%--<h3>AngularJS connection: {{textblock}}</h3>--%>
     <p id="test">Click here</p>
     <!--This is the aside-->
 
@@ -33,7 +35,7 @@
 
 
     <!--AngularJS-link-->
-    <script src="angular.min.js"></script>
+    <%--<script src="angular.min.js"></script>--%>
 
     <script>
         var x = 10;
