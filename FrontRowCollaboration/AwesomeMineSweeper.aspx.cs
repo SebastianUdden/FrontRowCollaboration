@@ -12,8 +12,7 @@ namespace FrontRowCollaboration
     {
 
         List<ImageButton> ListOfButtons;
-
-
+        
         protected void Page_Load(object sender, EventArgs e)
         {
             int gridSize = 49;
@@ -112,6 +111,14 @@ namespace FrontRowCollaboration
         protected void Button_Click(object sender, EventArgs e)
         {
 
+            foreach(ImageButton ib in ListOfButtons)
+            {
+                if (ib.AlternateText != "")
+                    break;
+                
+                return; 
+            }
+
             ImageButton clickedButton = (ImageButton)sender;
             clickedButton.ToolTip = "clicked";
             int thisID = Convert.ToInt32(clickedButton.ID);
@@ -124,8 +131,14 @@ namespace FrontRowCollaboration
                     clickedButton.AlternateText = clickedButton.AlternateText.Substring(0, 1) + "FLAG";
                     clickedButton.ImageUrl = "https://upload.wikimedia.org/wikipedia/commons/8/83/Minesweeper_flag.svg";
 
-
-                    //CheckWinningCondition();
+                    if(IsGameWon())
+                    {
+                        Debug.Write("\n\nYOU WON!!");
+                    }
+                    else
+                    {
+                        Debug.Write("\n\n YOU HAVE NOT WON YET!");
+                    }
 
                     return; 
                 }
@@ -148,6 +161,32 @@ namespace FrontRowCollaboration
             }
 
             UpdateGameField();
+
+        }
+
+        protected bool IsGameWon()
+        {
+            foreach(ImageButton ib in ListOfButtons)
+            {
+                if(ib.AlternateText.Count() > 0)
+                {
+                    if(ib.AlternateText.Substring(0,1) == "X")
+                    {
+                        if(ib.AlternateText.Count() < 3)
+                        {
+                            return false;
+                        }
+                        else if(ib.AlternateText.Substring(1,4) != "FLAG")
+                        {
+
+                            return false;
+                        }
+
+                    }
+                }
+            }
+
+            return true; 
 
         }
 
@@ -266,6 +305,7 @@ namespace FrontRowCollaboration
                 }
 
             }
+            
         }
 
         protected void EasyMode()
