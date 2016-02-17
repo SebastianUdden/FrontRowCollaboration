@@ -10,7 +10,7 @@
 
     <div id="difficultyButtons">
             <label>
-                <input type="radio" runat="server" id="rbEasy" class="sepButton" name="difficulty"/>
+                <input type="radio" runat="server" id="rbEasy" onclick="rbEasy_Click" class="sepButton" name="difficulty"/>
                 <span class="overlay">Easy</span></label>
             <label>
                 <input type="radio" runat="server" id="rbMedium" class="sepButton" name="difficulty"/>

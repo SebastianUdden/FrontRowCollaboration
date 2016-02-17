@@ -12,24 +12,47 @@ namespace FrontRowCollaboration
     {
 
         List<ImageButton> ListOfButtons;
+        
 
         protected void Page_Load(object sender, EventArgs e)
         {
             int gridSize = 49;
             SweeperGame game = new SweeperGame();
             ListOfButtons = new List<ImageButton>();
-
             createGameField(gridSize);
-            
+
         }
 
 
 
         protected void bStartNewGame_Click(object sender, EventArgs e)
         {
+            if ((!rbEasy.Checked) && (!rbMedium.Checked) && (!rbHard.Checked))
+            {
+                Debug.Write("RETURNED ON RB \n");
+                return;
+            }
+
+            foreach(ImageButton ib in ListOfButtons)
+            {
+                if (ib.AlternateText != "")
+                {
+                    Debug.Write("RETURNED ON AT"); 
+                    return;
+
+                }
+            }
+
+            Debug.Write("STARTING NEW GAME");
             int gridSize = 49;
+            //createGameField(gridSize);
             StartNewGame(gridSize);
 
+        }
+
+        protected void rbEasy_Click(object sender, EventArgs e)
+        {
+            bStartNewGame.Visible = true;
         }
 
         protected void StartNewGame(int gridSize)
@@ -109,7 +132,7 @@ namespace FrontRowCollaboration
                     return; 
                 }
             }
-            if (clickedButton.AlternateText.Count() > 0)
+            if ((clickedButton.AlternateText.Count() > 0) && (clickedButton.AlternateText != "BOM"))
                 clickedButton.AlternateText = clickedButton.AlternateText.Substring(0, 1);
 
             if (clickedButton.AlternateText == "X")
@@ -117,7 +140,7 @@ namespace FrontRowCollaboration
                 
                 ShowLoserField();
 
-                clickedButton.ImageUrl = "";
+                clickedButton.ImageUrl = @"http://a5.mzstatic.com/us/r30/Purple4/v4/a4/81/d5/a481d5b9-c5ad-2148-57c0-3ccb1966fd75/icon175x175.jpeg";
                 clickedButton.AlternateText = "BOM";
             }
 
@@ -147,7 +170,7 @@ namespace FrontRowCollaboration
 
                         if (ib.AlternateText == "BOM")
                         {
-                            ib.ImageUrl = "";
+                            ib.ImageUrl = @"http://a5.mzstatic.com/us/r30/Purple4/v4/a4/81/d5/a481d5b9-c5ad-2148-57c0-3ccb1966fd75/icon175x175.jpeg";
                         }
 
                         else if ((ib.AlternateText.Substring(0, 1) == "X") && (ib.AlternateText.Count() < 2))
