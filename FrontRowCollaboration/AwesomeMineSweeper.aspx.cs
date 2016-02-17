@@ -12,7 +12,7 @@ namespace FrontRowCollaboration
     {
 
         List<ImageButton> ListOfButtons;
-        
+
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -20,7 +20,6 @@ namespace FrontRowCollaboration
             SweeperGame game = new SweeperGame();
             ListOfButtons = new List<ImageButton>();
             createGameField(gridSize);
-
         }
 
 
@@ -57,7 +56,6 @@ namespace FrontRowCollaboration
 
         protected void StartNewGame(int gridSize)
         {
-            
             Debug.WriteLine("Created gamefield");
 
             SweeperGame game = new SweeperGame();
