@@ -109,7 +109,9 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="main.js" />
     <Content Include="Pictures\mine.jpg" />
-    <Content Include="packages.config" />
+    <Content Include="packages.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -132,6 +134,7 @@
     <Content Include="highscore.xml" />
     <Content Include="WebForm6.aspx" />
     <Content Include="WebForm7.aspx" />
+    <Content Include="AwesomeGridSweeper.aspx" />
     <None Include="scripts\jquery-1.9.1.intellisense.js" />
     <Content Include="scripts\bootstrap.js" />
     <Content Include="scripts\bootstrap.min.js" />
@@ -214,6 +217,13 @@
     </Compile>
     <Compile Include="WebForm7.aspx.designer.cs">
       <DependentUpon>WebForm7.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AwesomeGridSweeper.aspx.cs">
+      <DependentUpon>AwesomeGridSweeper.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AwesomeGridSweeper.aspx.designer.cs">
+      <DependentUpon>AwesomeGridSweeper.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

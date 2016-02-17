@@ -676,5 +676,11 @@ namespace FrontRowCollaboration
             #endregion
 
         }
+
+        public void GridGenerateMap(List<ImageButton> buttons)
+        {
+            foreach()
+
+        }
     }
 }
