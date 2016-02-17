@@ -94,6 +94,7 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Pictures\3077-24x24x8.png" />
     <Content Include="AngularMineSweeperStandalone.aspx" />
     <Content Include="ClockPage.aspx" />
     <Content Include="Pictures\76px-Minesweeper_1.svg.png" />

@@ -1,5 +1,13 @@
 ﻿@import url('AwesomeStyleSheet.css');
 
+#CoveredSpot {
+    background-color:aqua;
+}
+
+#CoveredSpot:hover {
+    background-color:red;
+}
+
 .BIGMESSAGE {
     font-family:monospace;
     text-align:center;
