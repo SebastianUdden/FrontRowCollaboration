@@ -4,7 +4,7 @@
 </asp:Content>
 
 
-<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server" ng-app="cbTimer">
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
     
 
@@ -35,34 +35,6 @@
      <asp:Label ID="lGameAlerts" runat="server" Text="Label" Visible="False" Font-Size="20pt" ForeColor="Red"></asp:Label>
     <br />
      <br /> 
-    <div id="container" ng-controller="cbTimerCtrl">
-        <div>
-            <div id="clock">{{timer}}</div>
-            <button id="TimerButton" onclick="return false;" ng-click="toggleTimer()">{{mode}}</button>
-        </div>
-        <div>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Start</th>
-                        <th>End</th>
-                        <th>Duration (secs)</th>
-
-                    </tr>
-                </thead>
-                <tbody ng-repeat="item in timeSchedule.history">
-                    <tr>
-                        <td>{{item[0] | date:'MM/dd/yy HH:mm:ss'}}</td>
-                        <td>{{item[1] | date:'MM/dd/yy HH:mm:ss'}}</td>
-                        <td>{{item[2] | number:1}}</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-    </div>
-
-    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.0-rc.3/angular.min.js"></script>
-    <script src="main.js"></script>
 
     <asp:Button ID="bStartNewGame" class="MenuButton" runat="server" OnClick="bStartNewGame_Click" Text="Start New Game" />
     
