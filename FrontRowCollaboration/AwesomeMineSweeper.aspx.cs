@@ -15,6 +15,16 @@ namespace FrontRowCollaboration
         
         protected void Page_Load(object sender, EventArgs e)
         {
+
+            if(IsPostBack)
+            {
+                Debug.WriteLine("\n**************THIS WAS A POSTBACK \n**************");
+            }
+            else
+            {
+                Debug.WriteLine("\n**************THIS NOT WAS A POSTBACK \n**************");
+            }
+
             int gridSize = 49;
             SweeperGame game = new SweeperGame();
             ListOfButtons = new List<ImageButton>();
@@ -117,11 +127,13 @@ namespace FrontRowCollaboration
 
             gameField.Width = (int)(Math.Sqrt(gridSize) * 40);
             gameField.Height = gameField.Width;
+
+
         }
 
         protected void Button_Click(object sender, EventArgs e)
         {
-
+            
             foreach(ImageButton ib in ListOfButtons)
             {
                 if (ib.AlternateText != "")
@@ -153,12 +165,11 @@ namespace FrontRowCollaboration
                     {
                         Debug.Write("\n\n YOU HAVE NOT WON YET!");
                         
-                        
-
                     }
 
                     return; 
                 }
+
             }
             if ((clickedButton.AlternateText.Count() > 0) && (clickedButton.AlternateText != "BOM"))
                 clickedButton.AlternateText = clickedButton.AlternateText.Substring(0, 1);
@@ -178,7 +189,7 @@ namespace FrontRowCollaboration
             }
 
             UpdateGameField();
-
+            
         }
 
         protected bool IsGameWon()
