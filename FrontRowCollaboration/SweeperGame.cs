@@ -15,7 +15,7 @@ namespace FrontRowCollaboration
         public void GenerateRandomMines(List<ImageButton> buttons, int numberOfMines)
         {
             Random random = new Random();
-            Thread.Sleep(100);
+            Thread.Sleep(10);
             int minesCount = numberOfMines;
 
             while(minesCount > 0)

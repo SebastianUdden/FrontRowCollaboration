@@ -40,6 +40,15 @@ namespace FrontRowCollaboration {
         protected global::System.Web.UI.HtmlControls.HtmlInputRadioButton rbHard;
         
         /// <summary>
+        /// cbFlag control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CheckBox cbFlag;
+        
+        /// <summary>
         /// gameField control.
         /// </summary>
         /// <remarks>
