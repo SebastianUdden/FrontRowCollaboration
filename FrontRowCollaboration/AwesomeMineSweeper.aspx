@@ -47,6 +47,7 @@
                         <th>Start</th>
                         <th>End</th>
                         <th>Duration (secs)</th>
+
                     </tr>
                 </thead>
                 <tbody ng-repeat="item in timeSchedule.history">
