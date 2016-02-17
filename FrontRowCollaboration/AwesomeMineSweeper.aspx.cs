@@ -10,6 +10,7 @@ namespace FrontRowCollaboration
 {
     public partial class WebForm5 : System.Web.UI.Page
     {
+
         List<ImageButton> ListOfButtons;
 
         protected void Page_Load(object sender, EventArgs e)
@@ -19,13 +20,16 @@ namespace FrontRowCollaboration
             ListOfButtons = new List<ImageButton>();
 
             createGameField(gridSize);
-
+            
         }
+
+
 
         protected void bStartNewGame_Click(object sender, EventArgs e)
         {
             int gridSize = 49;
             StartNewGame(gridSize);
+
         }
 
         protected void StartNewGame(int gridSize)
@@ -35,7 +39,7 @@ namespace FrontRowCollaboration
 
             SweeperGame game = new SweeperGame();
 
-            int minesCount = ListOfButtons.Count() / 2;
+            int minesCount = ListOfButtons.Count() / 3;
 
             if (rbEasy.Checked)
                 minesCount = ListOfButtons.Count() / 8;
@@ -43,7 +47,6 @@ namespace FrontRowCollaboration
                 minesCount = ListOfButtons.Count() / 4;
             else if (rbHard.Checked)
                 minesCount = ListOfButtons.Count() / 2;
-            
 
             try
             {
@@ -77,8 +80,7 @@ namespace FrontRowCollaboration
                 tb.Click += new ImageClickEventHandler(this.Button_Click);
 
                 gameField.Controls.Add(tb);
-
-                Debug.WriteLine("Adding list of buttons");
+                
                 ListOfButtons.Add(tb);
             }
 
@@ -90,19 +92,33 @@ namespace FrontRowCollaboration
         {
 
             ImageButton clickedButton = (ImageButton)sender;
-            
             clickedButton.ToolTip = "clicked";
-
             int thisID = Convert.ToInt32(clickedButton.ID);
-            
-            if(clickedButton.AlternateText == "X")
+
+            if(clickedButton.AlternateText.Count() > 0)
+            { 
+                if ((cbFlag.Checked) && (clickedButton.AlternateText != (clickedButton.AlternateText.Substring(0,1)) + "FLAG"))
+                {
+                
+                    clickedButton.AlternateText = clickedButton.AlternateText.Substring(0, 1) + "FLAG";
+                    clickedButton.ImageUrl = "https://upload.wikimedia.org/wikipedia/commons/8/83/Minesweeper_flag.svg";
+
+
+                    //CheckWinningCondition();
+
+                    return; 
+                }
+            }
+            if (clickedButton.AlternateText.Count() > 0)
+                clickedButton.AlternateText = clickedButton.AlternateText.Substring(0, 1);
+
+            if (clickedButton.AlternateText == "X")
             {
                 
                 ShowLoserField();
 
                 clickedButton.ImageUrl = "";
                 clickedButton.AlternateText = "BOM";
-                
             }
 
             else
@@ -119,40 +135,62 @@ namespace FrontRowCollaboration
             
             foreach(ImageButton ib in ListOfButtons)
             {
+
                 
                 if (ib.ToolTip == "clicked")
                 {
-                    if(ib.AlternateText == "X")
-                    {
-                        ib.ImageUrl = "";
-                        ib.AlternateText = "X";
+                    if(ib.AlternateText.Count() > 0)
+                        Debug.WriteLine("Substring is: " + ib.AlternateText.Substring(0, 1));
 
-                    }
-                    else if (ib.AlternateText == "2")
-                    {
-                        ib.ImageUrl = @"https://upload.wikimedia.org/wikipedia/commons/4/44/Minesweeper_2.svg";
-                    }
-
-                    else if (ib.AlternateText == "3")
-                    {
-                        ib.ImageUrl = @"https://upload.wikimedia.org/wikipedia/commons/0/08/Minesweeper_3.svg";
-                    }
-
-                    else if (ib.AlternateText == "4")
-                    {
-                        ib.ImageUrl = @"https://upload.wikimedia.org/wikipedia/commons/4/4f/Minesweeper_4.svg";
-                    }
-
-                    else if (ib.AlternateText == "5")
-                    {
-                        ib.ImageUrl = @"https://upload.wikimedia.org/wikipedia/commons/4/46/Minesweeper_5.svg";
-                    }
-                    
-
-                    else if (ib.AlternateText == "1")
+                    if (ib.AlternateText.Count() > 0)
                     {
 
-                        ib.ImageUrl = @"https://upload.wikimedia.org/wikipedia/commons/c/ca/Minesweeper_1.svg";
+                        if (ib.AlternateText == "BOM")
+                        {
+                            ib.ImageUrl = "";
+                        }
+
+                        else if ((ib.AlternateText.Substring(0, 1) == "X") && (ib.AlternateText.Count() < 2))
+                        {
+                            ib.ImageUrl = @"http://media2.androidappsgame.com/1/214881/com-jipsaan-minesweeper-214881.jpg";
+                            ib.AlternateText = "X";
+                        }
+
+                        else if ((ib.AlternateText.Substring(0, 1) == "2") && (ib.AlternateText.Count() < 2))
+                        {
+                            ib.ImageUrl = @"https://upload.wikimedia.org/wikipedia/commons/4/44/Minesweeper_2.svg";
+                        }
+
+                        else if ((ib.AlternateText.Substring(0, 1) == "3") && (ib.AlternateText.Count() < 2))
+                        {
+                            ib.ImageUrl = @"https://upload.wikimedia.org/wikipedia/commons/0/08/Minesweeper_3.svg";
+                        }
+
+                        else if ((ib.AlternateText.Substring(0, 1) == "4") && (ib.AlternateText.Count() < 2))
+                        {
+                            ib.ImageUrl = @"https://upload.wikimedia.org/wikipedia/commons/4/4f/Minesweeper_4.svg";
+                        }
+
+                        else if ((ib.AlternateText.Substring(0, 1) == "5") && (ib.AlternateText.Count() < 2))
+                        {
+                            ib.ImageUrl = @"https://upload.wikimedia.org/wikipedia/commons/4/46/Minesweeper_5.svg";
+                        }
+
+                        else if ((ib.AlternateText.Substring(0, 1) == "1") && (ib.AlternateText.Count() < 2))
+                        {
+                            ib.ImageUrl = @"https://upload.wikimedia.org/wikipedia/commons/c/ca/Minesweeper_1.svg";
+                        }
+                        else if (ib.AlternateText.Count() > 3)
+                        {
+                            if (ib.AlternateText.Substring(1, 4) == "FLAG")
+                            {
+                                ib.ImageUrl = "https://upload.wikimedia.org/wikipedia/commons/8/83/Minesweeper_flag.svg";
+                            }
+                        }
+                        else
+                        {
+                            ib.ImageUrl = @"https://upload.wikimedia.org/wikipedia/commons/8/80/Minesweeper_0.svg";
+                        }
                     }
                     else
                     {
@@ -167,36 +205,37 @@ namespace FrontRowCollaboration
         {
             foreach (ImageButton ib in ListOfButtons)
             {
-                if (ib.AlternateText == "X")
+
+                if ((ib.AlternateText.Substring(0, 1) == "X") && (ib.AlternateText.Count() < 2))
                 {
 
                     ib.ImageUrl = @"http://media2.androidappsgame.com/1/214881/com-jipsaan-minesweeper-214881.jpg";
                 }
 
-                else if (ib.AlternateText == "2")
+                else if ((ib.AlternateText.Substring(0, 1) == "2") && (ib.AlternateText.Count() < 2))
                 {
                     ib.ImageUrl = @"https://upload.wikimedia.org/wikipedia/commons/4/44/Minesweeper_2.svg";
                 }
-                else if (ib.AlternateText == "3")
+                else if ((ib.AlternateText.Substring(0, 1) == "3") && (ib.AlternateText.Count() < 2))
                 {
                     ib.ImageUrl = @"https://upload.wikimedia.org/wikipedia/commons/0/08/Minesweeper_3.svg";
                 }
 
-                else if (ib.AlternateText == "4")
+                else if ((ib.AlternateText.Substring(0, 1) == "4") && (ib.AlternateText.Count() < 2))
                 {
                     ib.ImageUrl = @"https://upload.wikimedia.org/wikipedia/commons/4/4f/Minesweeper_4.svg";
                 }
 
-                else if (ib.AlternateText == "5")
+                else if ((ib.AlternateText.Substring(0, 1) == "5") && (ib.AlternateText.Count() < 2))
                 {
                     ib.ImageUrl = @"https://upload.wikimedia.org/wikipedia/commons/4/46/Minesweeper_5.svg";
                 }
-                else if (ib.AlternateText == "6")
+                else if ((ib.AlternateText.Substring(0, 1) == "6") && (ib.AlternateText.Count() < 2))
                 {
                     ib.ImageUrl = @"https://upload.wikimedia.org/wikipedia/commons/c/cc/Minesweeper_6.svg";
                 }
 
-                else if (ib.AlternateText == "1")
+                else if ((ib.AlternateText.Substring(0, 1) == "1") && (ib.AlternateText.Count() < 2))
                 {
                     ib.ImageUrl = @"https://upload.wikimedia.org/wikipedia/commons/c/ca/Minesweeper_1.svg";
                 }
@@ -204,7 +243,6 @@ namespace FrontRowCollaboration
                 {
                     ib.ImageUrl = @"https://upload.wikimedia.org/wikipedia/commons/8/80/Minesweeper_0.svg";
                 }
-                
 
             }
         }

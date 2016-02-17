@@ -18,6 +18,7 @@
             <label>
                 <input type="radio" runat="server" id="rbHard" class="sepButton" name="difficulty"/>
                 <span class="overlay">Hard</span></label>
+            <asp:CheckBox ID="cbFlag" runat="server" Text="Set Flag" />
         </div>
      <br /> <br />
 
