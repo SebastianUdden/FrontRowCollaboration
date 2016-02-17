@@ -4,8 +4,91 @@
     /*text-align:center;*/
 }
 
+
+#container{
+    height:100px;
+}
+#clock{
+    width: 300px;
+    height: 100px;
+    border: 1px solid #DDD;
+    clear:none;
+    float:left;
+    font-size: 60pt;
+    padding-left:20px;
+
+   
+}
+
+a{
+    display:inline-block;
+    padding:8px;
+    border-radius: 5px;
+    border:1px solid #DDD;
+    color:white;
+    background-color: #ff3300;
+}
+
+button{
+    height:102px;
+    width:102px;
+    float:left;
+    font-size:2em;
+}
+
+table, div {
+    clear:both;
+    margin-bottom: 20px;
+}
+table {
+    width:410px;
+    border:1px solid #DDD;
+}
+
+th {
+    padding: 5px;
+    background-color: bisque;
+}
+
+td {
+    padding: 5px;
+    background-color: #EEE;
+}
+
+
+/*.stopWatch {
+	padding: 5px;
+	background: linear-gradient(top, #222, #eee);
+	border: 7px solid #efefef;
+	border-radius: 5px;
+    display: inline-block;
+    margin: 10px auto;
+	
+	box-shadow: 
+		inset 0 -2px 10px 1px rgba(0, 0, 0, 0.75), 
+		0 5px 20px -10px rgba(0, 0, 0, 1);
+}*/
+/*.numbers {
+    font-size: 30px;
+	line-height: 40px;
+	font-family: digital, arial, verdana;
+	color: black;
+}*/
+
+@font-face {
+	font-family: 'digital';
+	src: url('http://thecodeplayer.com/uploads/fonts/DS-DIGI.TTF');
+	
+}
+
+.container {
+	padding: 5px;
+	text-align: center;
+}
+
+
 #Menu {
-    -webkit-transition: background-color 1000ms linear;
+    -webkit-transition: background-color 500ms linear;
     background-color: orangered;
     margin: 0px auto;
     font-size: 0px;
@@ -17,7 +100,6 @@
     }
 
 .MenuButton {
-    -webkit-transition: background-color 1500ms linear;
     color: black;
     text-decoration: none;
     padding: 4px;
@@ -27,12 +109,12 @@
 
     .MenuButton:hover {
         text-decoration: none;
-        -webkit-transition: background-color 1500ms linear;
-        background-color: yellow;
+        background-color: #ffed00;
+        color:black;
     }
 
 #DifficultyMenu {
-    -webkit-transition: background-color 1000ms linear;
+    -webkit-transition: background-color 200ms linear;
     background-color: orangered;
     margin: 0px auto;
     font-size: 0px;
@@ -44,7 +126,7 @@ input[type=radio] {
 }
 
     input[type=radio]:checked + .overlay {
-        background-color: yellow;
+        background-color: #ffed00;
     }
 
 .sepButton {
@@ -56,7 +138,7 @@ input[type=radio] {
     
     text-align: center;
     width: 100px;
-    -webkit-transition: background-color 1500ms linear;
+    -webkit-transition: background-color 200ms linear;
     color: black;
     text-decoration: none;
     padding: 10px;
@@ -65,7 +147,7 @@ input[type=radio] {
 }
 
 #theBIGASSButton {
-    -webkit-transition: background-color 800ms linear;
+    -webkit-transition: background-color 900ms linear;
     background-color: #808080;
 }
 

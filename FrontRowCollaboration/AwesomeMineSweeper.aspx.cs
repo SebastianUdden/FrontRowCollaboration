@@ -19,7 +19,6 @@ namespace FrontRowCollaboration
             ListOfButtons = new List<ImageButton>();
 
             createGameField(gridSize);
-
         }
 
         protected void bStartNewGame_Click(object sender, EventArgs e)
@@ -30,7 +29,6 @@ namespace FrontRowCollaboration
 
         protected void StartNewGame(int gridSize)
         {
-            
             Debug.WriteLine("Created gamefield");
 
             SweeperGame game = new SweeperGame();
@@ -43,7 +41,7 @@ namespace FrontRowCollaboration
                 minesCount = ListOfButtons.Count() / 4;
             else if (rbHard.Checked)
                 minesCount = ListOfButtons.Count() / 2;
-            
+
 
             try
             {
