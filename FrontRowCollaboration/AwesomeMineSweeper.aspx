@@ -27,6 +27,8 @@
 
     <br />
     <br />
+     <asp:Label ID="lGameAlerts" runat="server" Text="Label" Visible="False" Font-Size="20pt" ForeColor="Red"></asp:Label>
+    <br />
      <br /> 
     <asp:Button ID="bStartNewGame" class="MenuButton" runat="server" OnClick="bStartNewGame_Click" Text="Start New Game" />
     

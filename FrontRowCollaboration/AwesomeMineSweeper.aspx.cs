@@ -28,20 +28,31 @@ namespace FrontRowCollaboration
             if ((!rbEasy.Checked) && (!rbMedium.Checked) && (!rbHard.Checked))
             {
                 Debug.Write("RETURNED ON RB \n");
+                lGameAlerts.Visible = true;
+                lGameAlerts.Text = "Choose difficulty first";
+
                 return;
             }
 
-            foreach(ImageButton ib in ListOfButtons)
+            lGameAlerts.Text = "";
+            lGameAlerts.Visible = false;
+
+            foreach (ImageButton ib in ListOfButtons)
             {
                 if (ib.AlternateText != "")
                 {
-                    Debug.Write("RETURNED ON AT"); 
+                    Debug.Write("RETURNED ON AT");
+
+                    lGameAlerts.Text = "Game already started";
+                    lGameAlerts.Visible = true; 
                     return;
 
                 }
             }
 
             Debug.Write("STARTING NEW GAME");
+            lGameAlerts.Visible = false;
+            lGameAlerts.Text = "";
             int gridSize = 49;
             //createGameField(gridSize);
             StartNewGame(gridSize);
@@ -134,10 +145,16 @@ namespace FrontRowCollaboration
                     if(IsGameWon())
                     {
                         Debug.Write("\n\nYOU WON!!");
+                        lGameAlerts.Visible = true;
+                        lGameAlerts.Text = "YOU WON!!";
+
                     }
                     else
                     {
                         Debug.Write("\n\n YOU HAVE NOT WON YET!");
+                        
+                        
+
                     }
 
                     return; 
@@ -178,16 +195,13 @@ namespace FrontRowCollaboration
                         }
                         else if(ib.AlternateText.Substring(1,4) != "FLAG")
                         {
-
                             return false;
                         }
-
                     }
                 }
             }
 
             return true; 
-
         }
 
         protected void UpdateGameField()
@@ -305,6 +319,9 @@ namespace FrontRowCollaboration
                 }
 
             }
+
+            lGameAlerts.Visible = true;
+            lGameAlerts.Text = "YOU LOST";
             
         }
 

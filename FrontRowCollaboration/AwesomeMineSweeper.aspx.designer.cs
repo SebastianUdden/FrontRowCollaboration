@@ -58,6 +58,15 @@ namespace FrontRowCollaboration {
         protected global::System.Web.UI.WebControls.Panel gameField;
         
         /// <summary>
+        /// lGameAlerts control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lGameAlerts;
+        
+        /// <summary>
         /// bStartNewGame control.
         /// </summary>
         /// <remarks>
