@@ -94,6 +94,7 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="AngularMineSweeperStandalone.aspx" />
     <Content Include="ClockPage.aspx" />
     <Content Include="Pictures\76px-Minesweeper_1.svg.png" />
     <Content Include="Pictures\76px-Minesweeper_2.svg.png" />
@@ -132,6 +133,8 @@
     <Content Include="highscore.xml" />
     <Content Include="WebForm6.aspx" />
     <Content Include="WebForm7.aspx" />
+    <Content Include="AngularMineSweeper.aspx" />
+    <Content Include="AngularMineSweeperFunctional.aspx" />
     <None Include="scripts\jquery-1.9.1.intellisense.js" />
     <Content Include="scripts\bootstrap.js" />
     <Content Include="scripts\bootstrap.min.js" />
@@ -153,6 +156,13 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AngularMineSweeperStandalone.aspx.cs">
+      <DependentUpon>AngularMineSweeperStandalone.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AngularMineSweeperStandalone.aspx.designer.cs">
+      <DependentUpon>AngularMineSweeperStandalone.aspx</DependentUpon>
+    </Compile>
     <Compile Include="ClockPage.aspx.cs">
       <DependentUpon>ClockPage.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -214,6 +224,20 @@
     </Compile>
     <Compile Include="WebForm7.aspx.designer.cs">
       <DependentUpon>WebForm7.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AngularMineSweeper.aspx.cs">
+      <DependentUpon>AngularMineSweeper.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AngularMineSweeper.aspx.designer.cs">
+      <DependentUpon>AngularMineSweeper.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AngularMineSweeperFunctional.aspx.cs">
+      <DependentUpon>AngularMineSweeperFunctional.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AngularMineSweeperFunctional.aspx.designer.cs">
+      <DependentUpon>AngularMineSweeperFunctional.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
